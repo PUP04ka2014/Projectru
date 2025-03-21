@@ -1,0 +1,316 @@
+.profile-sidebar {
+    background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+}
+
+.nav-pills .nav-link {
+    color: #6c757d;
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #f8f9fa;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #fff;
+    color: #4158D0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+    height: 150px;
+    border-radius: 15px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border: 4px solid #fff;
+    margin-top: -60px;
+    background-color: #fff;
+}
+
+.settings-card {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.settings-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-switch .form-check-input {
+    width: 3em;
+    height: 1.5em;
+    margin-left: -3.5em;
+}
+
+.activity-item {
+    border-left: 2px solid #e9ecef;
+    padding-left: 20px;
+    position: relative;
+}
+
+.activity-item::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4158D0;
+    position: absolute;
+    left: -7px;
+    top: 5px;
+}
+
+.card-product-list,
+ .card-product-grid {
+     margin-bottom: 0
+ }
+
+ .card {
+     width: 500px;
+     position: relative;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word;
+     background-color: #fff;
+     background-clip: border-box;
+     border: 1px solid rgba(0, 0, 0, 0.1);
+     border-radius: 23px;
+     margin-top: 50px
+ }
+
+ .card-product-grid:hover {
+     -webkit-box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
+     box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
+     -webkit-transition: .3s;
+     transition: .3s
+ }
+
+ .card-product-grid .img-wrap {
+     border-radius: 0.2rem 0.2rem 0 0;
+     height: 220px
+ }
+
+ .card .img-wrap {
+     overflow: hidden
+ }
+
+ .card-lg .img-wrap {
+     height: 280px
+ }
+
+ .card-product-grid .img-wrap {
+     border-radius: 0.2rem 0.2rem 0 0;
+     height: 275px;
+     padding: 16px
+ }
+
+ [class*='card-product'] .img-wrap img {
+     height: 100%;
+     max-width: 100%;
+     width: auto;
+     display: inline-block;
+     -o-object-fit: cover;
+     object-fit: cover
+ }
+
+ .img-wrap {
+     text-align: center;
+     display: block
+ }
+
+ .card-product-grid .info-wrap {
+     overflow: hidden;
+     padding: 18px 20px
+ }
+
+ [class*='card-product'] a.title {
+     color: #212529;
+     display: block
+ }
+
+ .rating-stars {
+     display: inline-block;
+     vertical-align: middle;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     position: relative;
+     white-space: nowrap;
+     clear: both
+ }
+
+ .rating-stars li.stars-active {
+     z-index: 2;
+     position: absolute;
+     top: 0;
+     left: 0;
+     overflow: hidden
+ }
+
+ .rating-stars li {
+     display: block;
+     text-overflow: clip;
+     white-space: nowrap;
+     z-index: 1
+ }
+
+ .card-product-grid .bottom-wrap {
+     padding: 18px;
+     border-top: 1px solid #e4e4e4
+ }
+
+ .bottom-wrap-payment {
+     padding: 0px;
+     border-top: 1px solid #e4e4e4
+ }
+
+ .rated {
+     font-size: 10px;
+     color: #b3b4b6
+ }
+
+ .btn {
+     display: inline-block;
+     font-weight: 600;
+     color: #343a40;
+     text-align: center;
+     vertical-align: middle;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     background-color: transparent;
+     border: 1px solid transparent;
+     padding: 0.45rem 0.85rem;
+     font-size: 1rem;
+     line-height: 1.5;
+     border-radius: 0.2rem
+ }
+
+ .btn-primary {
+     color: #fff;
+     background-color: #3167eb;
+     border-color: #3167eb
+ }
+
+ .fa {
+     color: #FF5722
+ }
+ 
+
+ .quantity {
+    height: 35px;
+    display: flex;
+    width: 160px;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quantity button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    width: 31px;
+    height: auto;
+    text-align: center;
+    transition: background-color 0.2s;
+  }
+  
+  .quantity button:hover {
+    background-color: #2980b9;
+  }
+  
+  .input-box {
+    width: 105px;
+    text-align: center;
+    border: none;
+    padding: 8px 10px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+
+  .input-box::-webkit-inner-spin-button,
+  .input-box::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .input-box[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+
+  .rating-area {
+	overflow: hidden;
+	width:180px;
+    margin-top: 10px;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 35px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 32px;
+	line-height: 32px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+	position: relative;
+}
+
+del {
+    font-size: 15px;
+	position: relative;
+	color: #000;
+	text-decoration: none;
+}
+del:before {
+	content: "";
+	border-bottom: 2px solid red;
+	position: absolute;
+	width: 100%;
+	height: 70%;
+	transform: rotate(-15deg);
+}
