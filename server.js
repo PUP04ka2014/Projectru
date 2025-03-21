@@ -11,16 +11,15 @@ const { dirname } = require('path');
 
 let encodeUrl = parseUrl.urlencoded({ extended: false });
 
-//session middleware
+app.set('view engine', 'ejs');
+app.use(express.static(`${__dirname}`));
+
 app.use(sessions({
     secret: "thisismysecrctekey",
     saveUninitialized:true,
     cookie: { maxAge: 1000 * 60 * 60 * 24 }, // 24 hours
     resave: false
 }));
-
-app.set('view engine', 'ejs');
-app.use(express.static(`${__dirname}`));
 
 app.use(cookieParser());
 
@@ -31,47 +30,7 @@ var con = mysql.createConnection({
     database: "test"
 });
 
-app.use('/', function (request, response) {
-    var sql = `SELECT * FROM Products`;
-                con.query(sql, function (err, results) {
-                    if (err){
-                        console.log(err);
-                    }else{
-                        products = results;
-                        for(let i=0; i < products.length; i++){
-                            console.log(products[i].name);
-                            response.render('contact', {
-                            });
-                        };                                           
-                    };
-                        
-                });
-        
-    
-});
 
-
-app.get('/contact', function (request, response) {
-    let compName='Pupa Milano';
-    var sql = `select productName,productDescription from products where productName='${compName}'`;
-                con.query(sql, function (err, result) {
-                    if (err){
-                        console.log(err);
-                    }else{
-                        response.render('contact', {
-                        title: result[0].productName,
-                        description: result[0].productDescription,
-                    });
-                    };
-                });
-        
-    
-});
-
-
-app.get('/Customer', encodeUrl, (req,res) => {
-    res.sendFile(__dirname + '/Customer.html');
-})
 
 
 
@@ -196,6 +155,6 @@ app.post("/dashboard", encodeUrl, (req, res)=>{
     });
 });
 
-app.listen(4000, ()=>{
-    console.log("Server running on port 4000");
+app.listen(3000, ()=>{
+    console.log("Server running on port 3000");
 });
