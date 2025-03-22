@@ -36,7 +36,60 @@
       </nav>
 
 <div class="container">
+  <div class="row row-cols-md-4 g-2">
+  <% products.forEach(product => { %>
+      <div class="col">
+        <div class="container d-flex justify-content-center">
+          <figure class="card card-product-grid card-lg"><img src="<%= products.productThumbnail %>">
+                  <figcaption class="info-wrap">
+                    <div class="row">
+                      <div class="col-md-8 8col-xs-8"> <a href="cart.html" class="title" data-abc="true"><%= products.productName %></a> <span class="rated">Пупы</span> </div>
+                      <div class="col-md-4 col-xs-4">
+                          <div class="rating text-right">  <span class="rated">Рейтинг 5.5/5</span> </div>
+                      </div>
+                    </div>
+                  </figcaption>
+                <div class="bottom-wrap-payment">
+                  <figcaption class="info-wrap">
+                      <div class="row">
+                          <div class="col-md-9 col-xs-9">
+                            <a href="#" class="title" data-abc="true">$100</a> <span class="rated"></span> 
+                          </div>
+                          <div class="col-md-3 col-xs-3">
+                              <div class="rating text-right">Цена</div>
+                          </div>
+                      </div>
+                  </figcaption>
+                </div>
+              
+              <div class="bottom-wrap"> 
+                <div class="row">
+                  <div class="col-md-3 col-xs-3">
+                    <div>          
+                      <form action="/contact" method="get">
+                        <button type="submit" class="btn btn-primary">
+                          <img src="images/right_arrow.png" alt="" width="30px">
+                        </button>
+                      </form>      
+                    </div>
+                  </div>
+                  <div class="col-md-7 col-xs-7">
 
+                  </div>
+                  <div class="col-md-2 col-xs-2">
+                      <div>          
+                        <a href="index.html">
+                          <img src="images/shoping_cart.png" alt="" width="30px">
+                        </a>
+                      </div>
+                  </div>
+                </div> 
+              </div>
+          </figure>        
+      </div>
+    </div>
+    <% }) %>
+  </div> 
 </div>
 
 
