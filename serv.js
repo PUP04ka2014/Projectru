@@ -31,7 +31,7 @@ app.use('/',function(request,response){
 		}
 		else{
 			response.render('main_page', {
-				products: result,
+				sqlres: result
 			});
 		};	
 	});
