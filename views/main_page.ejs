@@ -42,24 +42,26 @@
     </div>
     <div class="col-md-9">
       <div class="row row-cols-md-1">
+<% i=0 %>
   <% sqlres.forEach(product => { %>
       <div class="col" style="height: 10vw;">
         <div class="card" style="width: 100%; height: 8vw; min-height: 100px;">
           <div class="row">
             <div class="col-md-3" style="height: 100%;">
               <a href="" class="img-wrap">
-                <img src="images/pupa3.png" alt="" style="width: 8vw;  min-height: 100px;">
+                <img src="<%= sqlres[i].productThumbnail %>" alt="" style="width: 8vw;  min-height: 100px;">
               </a>
             </div>
             <div class="col-md-7" style="height: 100%;">
               <div style="padding-top: 1.5vw;">
-                <p><%= sqlres.productName %></p>
+                <p><%= sqlres[i].productName %></p>
               </div>    
             </div>
             <div class="col-md-2" style="height: 100%;">
               <div style="padding: 1.5vw; width: 100%; height: 100%;">
                 <form action="">
                   <p style="float: right; margin-right: 0.8vw; font-size: 20px; margin-bottom: 0;">
+                    <%= prices[i].productPrice %>
                     100$                  
                   </p>
                   <button class="btn" style="float: right;">
@@ -71,6 +73,7 @@
           </div>
         </div>
       </div>
+      <% i++ %>
     <% }) %>
       </div>
     </div>

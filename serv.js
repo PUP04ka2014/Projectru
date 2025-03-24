@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 2000;
+const port = 3000;
 var mysql = require('mysql2');
 const sessions = require('express-session');
 
@@ -30,9 +30,13 @@ app.use('/',function(request,response){
 			console.log(err)
 		}
 		else{
-			response.render('main_page', {
-				sqlres: result
-			});
+			con.query(`Select productPrice From productprices`, (err, res1=result) => {
+				response.render('main_page', {					
+					sqlres: result,
+					prices: res1,
+				});
+				
+			})
 		};	
 	});
 })
