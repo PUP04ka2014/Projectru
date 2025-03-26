@@ -22,7 +22,29 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname));
 
 app.use('/',function(request,response){
-	const sql = "Select * From products"
+	const sql = `SELECT 
+    p.productID,
+    p.productName,
+    p.productDescription,
+    p.productThumbnail,
+    pp.productPrice AS lastPrice,
+    pp.priceDate AS lastPriceDate
+FROM 
+    products p
+JOIN 
+    (SELECT 
+         productID, 
+         MAX(priceDate) AS latestDate
+     FROM 
+         ProductPrices
+     GROUP BY 
+         productID) latest 
+    ON p.productID = latest.productID
+JOIN 
+    productprices pp 
+    ON pp.productID = latest.productID AND pp.priceDate = latest.latestDate
+ORDER BY 
+    p.productID;`
 
 
 	con.query(sql, (err,result) => {
@@ -30,13 +52,9 @@ app.use('/',function(request,response){
 			console.log(err)
 		}
 		else{
-			con.query(`Select productPrice From productprices`, (err, res1=result) => {
-				response.render('main_page', {					
-					sqlres: result,
-					prices: res1,
-				});
-				
-			})
+			response.render('main_page', {					
+				sqlres: result,
+			});
 		};	
 	});
 })
