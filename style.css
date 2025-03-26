@@ -314,3 +314,9 @@ del:before {
 	height: 70%;
 	transform: rotate(-15deg);
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #a1a1a1;
+  border-radius: 50%;
+  padding: .5rem;
+}
