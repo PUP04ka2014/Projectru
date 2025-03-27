@@ -29,11 +29,6 @@
                 </ul>
               </li>
             </ul>
-            <form action="/reg_btn" method="POST">
-              <button class="btn" type="button">
-                SignUp
-              </button>
-            </form>
             <button class="btn btn-primary" type="button" style="padding: 5px; margin-right: 5px;"><a href="Customer.html"><img src="images/avatar.png" style="width: 23px; margin-right: 3px;" alt=""></a></button>
             <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"style="padding: 5px;"><img src="images/list.png" alt="Button Images" style="width: 23px; margin-right: 5px;"></button>
           </div>
@@ -41,47 +36,29 @@
       </nav>
 
 <div class="container" style="margin-bottom: 2vw;">
-  <div class="row">
-    <div class="col-3 col-md-3">
-      
-    </div>
-    <div class="col-9 col-md-9">
-      <div class="row row-cols-1">
-<% i=0 %>
-  <% sqlres.forEach(product => { %>
-      <div class="col" style="height: 10vw;">
-        <div class="card" style="width: 100%; height: 8vw; min-height: 100px;">
-          <div class="row">
-            <div class="col-md-3" style="height: 100%;">
-              <a href="" class="img-wrap">
-                <img src="<%= sqlres[i].productThumbnail %>" alt="" style="width: 8vw;  min-height: 100px;">
-              </a>
-            </div>
-            <div class="col-md-7" style="height: 100%;">
-              <div style="padding-top: 1.5vw;">
-                <p><%= sqlres[i].productName %></p>
-              </div>    
-            </div>
-            <div class="col-md-2" style="height: 100%;">
-              <div style="padding: 1.5vw; width: 100%; height: 100%;">
-                <form action="">
-                  <p style="float: right; margin-right: 0.8vw; font-size: 20px; margin-bottom: 0;">
-                    <%= sqlres[i].lastPrice+"$" %>                 
-                  </p>
-                  <button class="btn" style="float: right;">
-                    awda
-                  </button>
-                </form>
-              </div>      
-            </div>
-          </div>
+    <h2>Login and register form with Node.js, Express.js and MySQL</h2>
+    <h3>Register form</h3>
+    <form action="/register" method="POST">
+      <div class="form-group mb-3">
+          <label>First name</label>
+          <input type="text" class="form-control" placeholder="First name" name="firstName">
+      </div>
+      <div class="form-group mb-3">
+          <label>Last name</label>
+          <input type="text" class="form-control" placeholder="Last name" name="lastName">
+      </div>
+      <div class="form-group mb-3">
+          <label>Username</label>
+          <input type="text" class="form-control" placeholder="Username" name="userName">
+      </div>
+      <div class="form-group mb-3">
+          <label>Password</label>
+          <input type="password" class="form-control" placeholder="Password" name="password">
         </div>
+      <div class="d-grid mt-3">
+      <button type="submit" class="btn btn-primary form-control">Submit</button>
       </div>
-      <% i++ %>
-    <% }) %>
-      </div>
-    </div>
-  </div> 
+    </form>
 </div>
 
 

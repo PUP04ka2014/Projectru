@@ -34,7 +34,6 @@ var con = mysql.createConnection({
 
 
 
-
 app.post('/register', encodeUrl, (req, res) => {
     var firstName = req.body.customerName;
     var lastName = req.body.customerPhone;
