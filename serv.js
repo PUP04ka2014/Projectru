@@ -61,12 +61,11 @@ ORDER BY
 	});
 })
 
-app.post('/reg_btn', encodeUrl, function(request,response) {
+app.get('/reg_btn', encodeUrl, function(request,response) {
 	console.log('1')
     response.render('reg', {				
     })
 })
-
 
 // app.post('/register', encodeUrl, (req, res) => {
 //     var firstName = req.body.customerName;
